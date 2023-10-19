@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="phonecont">
+    <button class="routerbtn" (click)="showrouterdetails()"><img src="/assets/images/routericon.png" style="height: 30px;"> ROUTERS</button>
+    <button class="databtn" (click)="showusagedetails()"><img src="/assets/images/dataicon.png" style="height: 18px; margin-right: 3px; margin-top: -4px;">Data used</button>
+    <button class="disconnectbtn" style="margin-right: 8px;"><img src="/assets/images/offbtn.png" style="height: 18px;"></button>
+    <div class="routerdetails" *ngIf="showrouter">
+        <p>
+            SSID: Batman's cave <br>
+            Model:   <br>
+            Firmware Version:   <br>
+            ipv4:   <br>
+        </p>
+    </div>
+    <div class="usagedetails" *ngIf="showusage">
+    <input type="text" placeholder="Data used" [(ngModel)]="data" style="height: 35px;">
+</div>
+</div>
+</div>
